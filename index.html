@@ -292,6 +292,60 @@
             papel.style.opacity = Math.random();
             confeti.appendChild(papel);
         }
+<script>
+        // LÓGICA DE CONTROL DEL BOTÓN INTERACTIVO
+        const boton = document.getElementById("boton");
+        const sorpresa = document.getElementById("sorpresa");
+
+        boton.addEventListener("click", () => {
+            if (sorpresa.style.display === "block") {
+                sorpresa.style.display = "none";
+                boton.innerHTML = "¡A celebrar, Lizz! 🎊";
+            } else {
+                sorpresa.style.display = "block";
+                boton.innerHTML = "Felicidades por sobrevivir 19 años 💀✨";
+            }
+        });
+
+        // EFECTO DE LLUVIA DE CONFETI INFINITA HSL
+        const confeti = document.getElementById("confeti");
+
+        for (let i = 0; i < 100; i++) {
+            const papel = document.createElement("span");
+            papel.style.left = Math.random() * 100 + "vw";
+            papel.style.animationDuration = (Math.random() * 3 + 3) + "s";
+            papel.style.animationDelay = (Math.random() * 5) + "s";
+            papel.style.background = `hsl(${Math.random() * 360}, 100%, 60%)`;
+            papel.style.opacity = Math.random();
+            confeti.appendChild(papel);
+        }
+<script>
+        // LÓGICA DE CONTROL DEL BOTÓN INTERACTIVO
+        const boton = document.getElementById("boton");
+        const sorpresa = document.getElementById("sorpresa");
+
+        boton.addEventListener("click", () => {
+            if (sorpresa.style.display === "block") {
+                sorpresa.style.display = "none";
+                boton.innerHTML = "¡A celebrar, Lizz! 🎊";
+            } else {
+                sorpresa.style.display = "block";
+                boton.innerHTML = "Felicidades por sobrevivir 19 años 💀✨";
+            }
+        });
+
+        // EFECTO DE LLUVIA DE CONFETI INFINITA HSL
+        const confeti = document.getElementById("confeti");
+
+        for (let i = 0; i < 100; i++) {
+            const papel = document.createElement("span");
+            papel.style.left = Math.random() * 100 + "vw";
+            papel.style.animationDuration = (Math.random() * 3 + 3) + "s";
+            papel.style.animationDelay = (Math.random() * 5) + "s";
+            papel.style.background = `hsl(${Math.random() * 360}, 100%, 60%)`;
+            papel.style.opacity = Math.random();
+            confeti.appendChild(papel);
+        }
     </script>
 
 </body>
