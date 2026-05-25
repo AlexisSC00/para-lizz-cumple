@@ -3,307 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¡Feliz Cumpleaños Lizz! 🎂✨</title>
-
+<title>Feliz Cumpleaños Lizz 🎂</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
-/* --- RESET GENERAL --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
-    min-height: 100vh;
-    overflow-x: hidden;
-    font-family: 'Quicksand', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px 10px;
+    min-height:100vh;
+    font-family:'Quicksand',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffe4f0;
+    position:relative;
+    overflow-x:hidden;
 }
 
-/* --- FONDO FIESTERO SEGURO (CAPIBARAS Y CONFETI) --- */
-.fondo-premium {
-    position: fixed;
-    inset: 0;
-    background-color: #ffccd5;
-    /* Tapiz ilustrado de capibaras bailando con gorrito y globos */
-    background-image: url('https://img.freepik.com/vector-premium/patron-sin-fisuras-lindos-capibaras-dibujos-animados-globos-confeti-sobre-fondo-rosa_764382-386.jpg');
+/* Fondo bonito */
+.fondo {
+    position:fixed;
+    inset:0;
+    background-image: url('https://i.imgur.com/8vL9v0K.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
-    opacity: 0.95;
-    z-index: -5;
+    opacity: 0.88;
+    z-index:-5;
 }
 
-/* --- EFECTO DE LLUVIA DE CONFETI --- */
-.lluvia-confeti {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 2;
-    top: 0;
-    left: 0;
+/* Confeti */
+.confeti {
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:2;
 }
-
-.lluvia-confeti span {
-    position: absolute;
-    top: -100px;
-    width: 10px;
-    height: 20px;
-    animation: caer linear infinite;
+.confeti span {
+    position:absolute;
+    top:-100px;
+    animation:caer linear infinite;
 }
-
 @keyframes caer {
-    0% { transform: translateY(-100px) rotate(0deg); }
-    100% { transform: translateY(120vh) rotate(720deg); }
+    0% { transform:translateY(-100px) rotate(0deg); }
+    100% { transform:translateY(120vh) rotate(720deg); }
 }
 
-/* --- LA CARTA INTERACTIVA --- */
-.contenedor-carta {
-    width: 100%;
-    max-width: 420px;
-    background: #ffffff;
-    border-radius: 40px;
-    padding: 60px 25px 30px 25px; /* Espacio para las luces arriba */
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    box-shadow: 0 25px 60px rgba(255, 77, 109, 0.35);
-    border: 6px solid #fff0f3;
-    /* Guirnalda de luces colgantes real en alta definición */
-    background-image: url('https://img.freepik.com/vector-premium/guirnalda-luces-colores-sobre-fondo-blanco_106456-1188.jpg');
-    background-size: 110% auto;
-    background-repeat: no-repeat;
-    background-position: top center;
+/* Contenedor */
+.contenedor {
+    width:430px;
+    background:white;
+    border-radius:35px;
+    padding:35px 30px;
+    text-align:center;
+    position:relative;
+    z-index:5;
+    box-shadow: 0 15px 50px rgba(255, 100, 150, 0.3);
+    border:8px solid #ffe4f0;
 }
 
-/* --- TÍTULO --- */
 h1 {
-    font-family: 'Fredoka', cursive;
-    color: #ff4d6d;
-    font-size: 2.8rem;
-    margin: 0 0 5px 0;
-    text-shadow: 3px 3px 0px #ffe5ec;
+    font-family:'Fredoka',cursive;
+    color:#ff4d94;
+    font-size:3.2rem;
+    margin-bottom:8px;
 }
 
-.subtitulo {
-    font-size: 1.3rem;
-    color: #ff758f;
-    font-weight: 700;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+.para {
+    font-size:1.45rem;
+    color:#d4628a;
+    margin-bottom:25px;
+    font-weight:bold;
 }
 
-/* --- LA TORTA ILUSTRADA DE LIZZ NATIVA --- */
-.torta-estetica {
-    width: 100%;
-    height: 180px;
-    margin: 0 auto 30px auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    filter: drop-shadow(0 12px 20px rgba(255, 77, 109, 0.25));
+/* Torta más bonita */
+.torta {
+    width:265px;
+    margin:0 auto 25px;
+    animation:flotar 3s infinite ease-in-out;
 }
-/* El cuerpo de la torta nativa */
-.torta-estetica::before {
-    content: "";
-    position: absolute;
-    width: 200px; height: 160px;
-    border-radius: 15px 15px 5px 5px;
-    background: linear-gradient(to top, #ffccd5 40%, #ffe5ec 100%);
-    border: 4px solid #ffb3c1;
-    z-index: 1;
-}
-/* Crema y texto central LIZZ */
-.torta-estetica::after {
-    content: "L I Z Z";
-    position: absolute;
-    z-index: 2;
-    top: 55%;
-    font-family: 'Fredoka One', cursive;
-    color: #ffffff;
-    font-size: 1.6rem;
-    letter-spacing: 5px;
-    text-shadow: 2.5px 2.5px 0px #ff4d6d;
-}
-/* Vela nativa */
-.torta-estetica div {
-    width: 8px; height: 30px;
-    background: linear-gradient(to top, #3a86ff, #00b4d8);
-    border-radius: 4px;
-    z-index: 3;
-    position: relative; top: -75px;
-}
-/* Llama nativa */
-.torta-estetica div::before {
-    content: "";
-    width: 14px; height: 22px;
-    background: radial-gradient(circle at bottom, #ffbe0b 30%, #fb5607 90%);
-    border-radius: 50% 50% 20% 20%;
-    position: absolute;
-    top: -25px; left: -3px;
-    box-shadow: 0 0 15px #ffbe0b;
-    animation: brillarFuego 0.3s infinite alternate ease-in-out;
-}
-@keyframes brillarFuego {
-    0% { transform: scale(1) rotate(-2deg); }
-    100% { transform: scale(1.15) rotate(2deg); }
+@keyframes flotar {
+    0%,100% { transform:translateY(0); }
+    50% { transform:translateY(-18px); }
 }
 
-/* --- EL BOTÓN DE LA CRISIS --- */
-.btn-accion {
-    background: linear-gradient(135deg, #ff4d6d, #ff758f);
-    color: white;
-    border: 2px solid #ffffff;
-    padding: 18px 25px;
-    font-size: 1.15rem;
-    font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
-    width: 100%;
-    transition: all 0.2s ease;
-    font-family: 'Quicksand', sans-serif;
-    outline: none;
+.boton {
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff4d94,#ff79b5);
+    color:white;
+    font-size:1.2rem;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+    box-shadow:0 10px 25px rgba(255,77,148,0.4);
+    transition:0.3s;
 }
+.boton:hover { transform:scale(1.05); }
 
-.btn-accion:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(255, 77, 109, 0.6);
+.sorpresa {
+    margin-top:25px;
+    background:#fff0f7;
+    border-radius:25px;
+    padding:20px;
+    border:3px dashed #ff9ec1;
+    display:none;
 }
-
-/* --- SECCIÓN SORPRESA EN JODA REPARADA --- */
-.seccion-revelada {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #fff5f6;
-    border-radius: 25px;
-    margin-top: 0;
-    border: 3px dashed #ffb3c1;
-}
-
-.seccion-revelada.abierta {
-    max-height: 950px;
-    opacity: 1;
-    margin-top: 25px;
-    padding: 25px 20px;
-}
-
-.carta-texto {
-    font-size: 1.05rem;
-    line-height: 1.65;
-    color: #4a4a4a;
-    text-align: left;
-    margin: 0 0 25px 0;
-}
-
-/* --- PISTA DE BAILE DE INTERNET SEGIN_SITIO (Nuevos enlaces HD) --- */
-.pista-gifs {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.pista-gifs img {
-    width: 31%;
-    height: 105px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid #ffccd5;
-}
-
-/* REPRODUCTOR SEGURO DE AUDIO NATIVO (24K MAGIC) */
-#musica-player { display: none; }
 </style>
 </head>
 <body>
 
-    <div class="fondo-premium"></div>
+<div class="fondo"></div>
+<div class="confeti" id="confeti"></div>
 
-    <div class="lluvia-confeti" id="confeti"></div>
+<div class="contenedor">
+    <h1>¡Feliz Cumpleaños! 🎉</h1>
+    <div class="para">✨ Para: Lizz ✨</div>
+    
+    <img class="torta" src="https://i.imgur.com/5v7X9kP.png" alt="Torta">
+    
+    <button class="boton" id="boton">
+        ¡A celebrar, Lizz! 🎊
+    </button>
 
-    <audio id="musica-player" loop>
-        <source src="https://media1.vocaroo.com/mp3/1oHh9pC9oG6t" type="audio/mp3">
-    </audio>
-
-    <div class="contenedor-carta">
-        <h1>¡Feliz Cumpleaños!</h1>
-        <div class="subtitulo">✨ Para: Lizz ✨</div>
-
-        <div class="torta-estetica">
-            <div></div> </div>
-
-        <button class="btn-accion" id="btnDisparar">¡A celebrar, Lizz! 🎉 crisis de los 20!</button>
-
-        <div class="seccion-revelada" id="bloqueSorpresa">
-            <p class="carta-texto">
-                *¡Feliz cumpleaños, Lizz! Que este nuevo año de vida venga cargado de muchísima felicidad, éxitos y momentos increíbles (o al menos que no se te queme la torta). Eres una amiga espectacular y te mereces lo mejor del mundo hoy y siempre. ¡A celebrar en grande con Bruno Mars! Te quiero un montón (pero no tanto como al capibara). ❤️🎂🦖
-            </p>
-
-            <div class="pista-gifs">
-                <img src="https://media.tenor.com/7SWeH6M7m0IAAAAj/capybara-dance.gif" alt="Capibara">
-                <img src="https://media.tenor.com/YvSgT0w_Z7gAAAAj/bubu-dudu.gif" alt="Osito">
-                <img src="https://media.tenor.com/2Yf8Xv7Xf_8AAAAj/happy-dog.gif" alt="Perrito">
-            </div>
+    <div class="sorpresa" id="sorpresa">
+        <p><b>¡Feliz cumpleaños, Lizz!</b></p>
+        <p>Ya oficialmente estás entrando a la etapa donde te emocionas por dormir temprano 😭✨</p>
+        <p>Espero que tus 19 vengan con muchísima felicidad, momentos épicos, cero estrés y que nunca se te queme la torta 🎂</p>
+        <p>Sigue siendo igual de divertida, caótica y random JAJA 💖</p>
+        <p>Y recuerda: los 19 son peligrosos... porque ya no eres adolescente chiquita pero tampoco adulta funcional 💀</p>
+        
+        <div style="margin-top:20px; display:flex; gap:8px; justify-content:center;">
+            <img src="https://media.tenor.com/7SWeH6M7m0IAAAAj/capybara-dance.gif" width="110">
+            <img src="https://media.tenor.com/Ix4mH6WbK0kAAAAj/bubu-dudu.gif" width="110">
+            <img src="https://media.tenor.com/2Yf8Xv7Xf_8AAAAj/happy-dog.gif" width="110">
         </div>
     </div>
+</div>
 
-    <script>
-        // --- CONTROL DEL BOTÓN Y LA MÚSICA ---
-        const boton = document.getElementById('btnDisparar');
-        const sorpresa = document.getElementById('bloqueSorpresa');
-        const musica = document.getElementById('musica-player');
-        let musicaTocando = false;
+<script>
+// Botón
+document.getElementById("boton").addEventListener("click", function() {
+    const sorpresa = document.getElementById("sorpresa");
+    if (sorpresa.style.display === "block") {
+        sorpresa.style.display = "none";
+        this.innerHTML = "¡A celebrar, Lizz! 🎊";
+    } else {
+        sorpresa.style.display = "block";
+        this.innerHTML = "Cerrar mensaje 💖";
+    }
+});
 
-        boton.addEventListener('click', () => {
-            sorpresa.classList.toggle('abierta');
-
-            if (sorpresa.classList.contains('abierta')) {
-                boton.textContent = '¡Felicidades por la vejez! 💀✨';
-                iniciarParticulas();
-                
-                // Activar audio nativo al hacer clic para evitar bloqueos
-                if (!musicaTocando) {
-                    musica.play().catch(e => console.log("Audio block by browser"));
-                    musicaTocando = true;
-                }
-            } else {
-                boton.textContent = '¡A celebrar, Lizz! 🎉 crisis de los 20!';
-                musica.pause();
-                musicaTocando = false;
-            }
-        });
-
-        // EFECTO DE CONFETI INFINITO HSL
-        const confeti = document.getElementById('confeti');
-
-        function iniciarParticulas() {
-            const gamaFiestera = ['#ff4d6d', '#ffbe0b', '#3a86ff', '#06d6a0', '#8338ec'];
-            for (let i = 0; i < 70; i++) {
-                const papel = document.createElement('span');
-                papel.style.left = Math.random() * 100 + 'vw';
-                papel.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                papel.style.animationDelay = (Math.random() * 5) + 's';
-                papel.style.background = gamaFiestera[Math.floor(Math.random() * gamaFiestera.length)];
-                papel.style.opacity = Math.random();
-                confeti.appendChild(papel);
-                setTimeout(() => papel.remove(), 7000); // Limpia los confetis caídos
-            }
-        }
-    </script>
+// Confeti
+const confeti = document.getElementById("confeti");
+for(let i = 0; i < 140; i++) {
+    const span = document.createElement("span");
+    span.style.left = Math.random() * 100 + "vw";
+    span.style.animationDuration = (Math.random() * 4 + 3) + "s";
+    span.style.background = `hsl(${Math.random()*360}, 100%, 65%)`;
+    span.style.width = (Math.random() * 12 + 8) + "px";
+    span.style.height = (Math.random() * 22 + 12) + "px";
+    confeti.appendChild(span);
+}
+</script>
 </body>
 </html>
