@@ -1,461 +1,298 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feliz Cumpleaños Lizz 🎂</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    min-height:100vh;
-    overflow-x:hidden;
-    font-family:'Quicksand',sans-serif;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:#ffd6df;
-    position:relative;
-}
-
-/* FONDO */
-
-.fondo{
-    position:fixed;
-    inset:0;
-
-    background-image:url('https://img.freepik.com/vector-premium/patron-sin-fisuras-lindos-capibaras-dibujos-animados-globos-confeti-sobre-fondo-rosa_764382-386.jpg');
-
-    background-size:500px;
-    opacity:0.95;
-    z-index:-5;
-}
-
-/* CONFETI */
-
-.confeti{
-    position:fixed;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    pointer-events:none;
-    z-index:2;
-}
-
-.confeti span{
-    position:absolute;
-    top:-100px;
-    width:10px;
-    height:20px;
-    animation:caer linear infinite;
-}
-
-@keyframes caer{
-
-    0%{
-        transform:translateY(-100px) rotate(0deg);
-    }
-
-    100%{
-        transform:translateY(120vh) rotate(720deg);
-    }
-
-}
-
-/* CARTA */
-
-.contenedor{
-    width:430px;
-    background:white;
-    border-radius:35px;
-    padding:30px;
-
-    text-align:center;
-
-    position:relative;
-    z-index:5;
-
-    box-shadow:
-    0 10px 40px rgba(0,0,0,0.15);
-
-    border:6px solid #ffe5ec;
-}
-
-/* LUCES */
-
-.luces{
-    width:100%;
-    margin-bottom:10px;
-}
-
-/* TITULO */
-
-h1{
-    font-family:'Fredoka',cursive;
-    color:#ff5d8f;
-    font-size:3rem;
-
-    margin-bottom:10px;
-}
-
-.para{
-    font-size:1.4rem;
-    color:#666;
-    margin-bottom:25px;
-    font-weight:bold;
-}
-
-/* TORTA */
-
-.torta{
-    width:230px;
-    margin:auto;
-    margin-bottom:25px;
-
-    animation:flotar 2s infinite ease-in-out;
-}
-
-@keyframes flotar{
-
-    0%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
-
-}
-
-/* BOTON */
-
-.boton{
-    width:100%;
-    padding:18px;
-
-    border:none;
-    border-radius:50px;
-
-    background:linear-gradient(45deg,#ff5d8f,#ff7da7);
-
-    color:white;
-    font-size:1.1rem;
-    font-weight:bold;
-
-    cursor:pointer;
-
-    position:relative;
-    overflow:hidden;
-
-    box-shadow:0 10px 20px rgba(255,93,143,0.4);
-
-    transition:0.3s;
-}
-
-.boton:hover{
-    transform:scale(1.03);
-}
-
-.boton::before,
-.boton::after{
-
-    content:"";
-    position:absolute;
-
-    width:120%;
-    height:120%;
-
-    border:3px solid rgba(255,255,255,0.5);
-    border-radius:50px;
-
-    top:-10%;
-    left:-10%;
-
-    animation:ondas 2s infinite;
-}
-
-.boton::after{
-    animation-delay:1s;
-}
-
-@keyframes ondas{
-
-    0%{
-        transform:scale(0.9);
-        opacity:1;
-    }
-
-    100%{
-        transform:scale(1.2);
-        opacity:0;
-    }
-
-}
-
-/* MENSAJE */
-
-.sorpresa{
-
-    margin-top:25px;
-    background:#fff5f7;
-
-    border-radius:25px;
-
-    padding:20px;
-
-    border:3px dashed #ffb6c1;
-
-    display:none;
-
-    animation:aparecer 0.6s ease;
-}
-
-@keyframes aparecer{
-
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-.texto{
-    font-size:1.1rem;
-    line-height:1.7;
-    color:#444;
-    margin-bottom:20px;
-}
-
-/* GIFS */
-
-.gifs{
-    display:flex;
-    gap:10px;
-}
-
-.gifs img{
-    width:33%;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.gifs img:hover{
-    transform:scale(1.05);
-}
-
-/* ICONOS */
-
-.iconos{
-    position:fixed;
-    top:20px;
-    right:20px;
-
-    z-index:20;
-
-    display:flex;
-    gap:15px;
-
-    font-size:1.7rem;
-}
-
-/* GLOBOS */
-
-.globo{
-    position:absolute;
-    width:70px;
-    animation:subir 8s linear infinite;
-    opacity:0.8;
-}
-
-@keyframes subir{
-
-    from{
-        transform:translateY(100vh);
-    }
-
-    to{
-        transform:translateY(-120vh);
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Lizz 🎂</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 10px;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffd6df;
+            position: relative;
+        }
+
+        /* FONDO */
+        .fondo {
+            position: fixed;
+            inset: 0;
+            background-image: url('https://img.freepik.com/vector-premium/patron-sin-fisuras-lindos-capibaras-dibujos-animados-globos-confeti-sobre-fondo-rosa_764382-386.jpg');
+            background-size: 360px;
+            opacity: 0.95;
+            z-index: -5;
+        }
+
+        /* CONFETI */
+        .confeti {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+
+        .confeti span {
+            position: absolute;
+            top: -100px;
+            width: 10px;
+            height: 20px;
+            animation: caer linear infinite;
+        }
+
+        @keyframes caer {
+            0% { transform: translateY(-100px) rotate(0deg); }
+            100% { transform: translateY(120vh) rotate(720deg); }
+        }
+
+        /* CARTA */
+        .contenedor {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: 35px;
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 15px 45px rgba(255, 93, 143, 0.25);
+            border: 6px solid #ffe5ec;
+        }
+
+        /* LUCES */
+        .luces {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        /* TITULO */
+        h1 {
+            font-family: 'Fredoka', cursive;
+            color: #ff5d8f;
+            font-size: 2.6rem;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 0px #ffe5ec;
+        }
+
+        .para {
+            font-size: 1.25rem;
+            color: #777;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        /* TORTA */
+        .torta {
+            width: 180px;
+            height: auto;
+            margin: 0 auto 25px auto;
+            display: block;
+            animation: flotar 2s infinite ease-in-out;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* BOTON */
+        .boton {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ff5d8f, #ff7da7);
+            color: white;
+            font-size: 1.15rem;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(255, 93, 143, 0.4);
+            transition: 0.3s;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .boton:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(255, 93, 143, 0.6);
+        }
+
+        /* MENSAJE */
+        .sorpresa {
+            margin-top: 25px;
+            background: #fff5f7;
+            border-radius: 25px;
+            padding: 22px;
+            border: 3px dashed #ffb6c1;
+            display: none;
+            animation: aparecer 0.6s ease forwards;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .texto {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        /* GIFS */
+        .gifs {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .gifs img {
+            width: 32%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #ffe5ec;
+            transition: 0.3s;
+        }
+
+        .gifs img:hover {
+            transform: scale(1.08);
+        }
+
+        /* REPRODUCTOR DE MUSICA VISIBLE SEGURO */
+        .reproductor-contenedor {
+            margin-bottom: 20px;
+            background: #fff5f7;
+            padding: 10px;
+            border-radius: 20px;
+            border: 2px solid #ffe5ec;
+        }
+
+        /* GLOBOS */
+        .globo {
+            position: fixed;
+            width: 65px;
+            bottom: -80px;
+            animation: subir 9s linear infinite;
+            opacity: 0.65;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes subir {
+            from { transform: translateY(0); }
+            to { transform: translateY(-130vh); }
+        }
+    </style>
 </head>
 <body>
 
-<div class="fondo"></div>
+    <div class="fondo"></div>
 
-<div class="confeti" id="confeti"></div>
+    <div class="confeti" id="confeti"></div>
 
-<div class="iconos">
-    🔇 🔊
-</div>
+    <img class="globo" style="left: 6%; animation-delay: 0s;" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" alt="globo">
+    <img class="globo" style="left: 12%; animation-delay: 4s;" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" alt="globo">
+    <img class="globo" style="left: 82%; animation-delay: 2s;" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" alt="globo">
+    <img class="globo" style="left: 89%; animation-delay: 6s;" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" alt="globo">
 
-<!-- GLOBOS -->
+    <div class="contenedor">
 
-<img class="globo"
-style="left:5%; animation-delay:0s;"
-src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+        <img class="luces" src="https://img.freepik.com/vector-premium/guirnalda-luces-colores-sobre-fondo-blanco_106456-1188.jpg" alt="luces">
 
-<img class="globo"
-style="left:85%; animation-delay:3s;"
-src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+        <h1>¡Feliz Cumpleaños! 🎉</h1>
 
-<!-- MÚSICA YOUTUBE -->
-
-<iframe width="0"
-height="0"
-src="https://www.youtube.com/embed/UqyT8IEBkvY?autoplay=1&loop=1&playlist=UqyT8IEBkvY"
-title="24K Magic"
-frameborder="0"
-allow="autoplay">
-</iframe>
-
-<div class="contenedor">
-
-    <img class="luces"
-    src="https://i.imgur.com/9QxP6nK.png">
-
-    <h1>¡Feliz Cumpleaños! 🎉</h1>
-
-    <div class="para">
-        ✨ Para: Lizz ✨
-    </div>
-
-    <img class="torta"
-    src="https://pngimg.com/d/birthday_cake_PNG96909.png">
-
-    <button class="boton" id="boton">
-        ¡A celebrar, Lizz! 🎊
-    </button>
-
-    <div class="sorpresa" id="sorpresa">
-
-        <div class="texto">
-
-            <b>
-            ¡Feliz cumpleaños, Lizz!
-            </b>
-
-            <br><br>
-
-            Ya oficialmente estás entrando
-            a la etapa donde te emocionas
-            por dormir temprano 😭✨
-
-            <br><br>
-
-            Espero que tus 19 vengan
-            con muchísima felicidad,
-            momentos épicos,
-            cero estrés
-            y que nunca se te queme la torta 🎂
-
-            <br><br>
-
-            Sigue siendo igual de divertida,
-            caótica y random JAJA 💖
-
-            <br><br>
-
-            Y recuerda:
-            los 19 son peligrosos...
-            porque ya no eres adolescente chiquita
-            pero tampoco adulta funcional 💀
-
+        <div class="para">
+            ✨ Para: Lizz ✨
         </div>
 
-        <div class="gifs">
+        <div class="reproductor-contenedor">
+            <p style="font-size: 0.85rem; color: #ff5d8f; font-weight: bold; margin-bottom: 5px;">🎵 Dale Play para activar la música oficial:</p>
+            <iframe width="100%" height="60" src="https://www.youtube.com/embed/UqyT8IEBkvY?rel=0&amp;controls=1&amp;showinfo=0" title="Bruno Mars - 24K Magic" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
 
-            <img src="https://media.tenor.com/7SWeH6M7m0IAAAAj/capybara-dance.gif">
+        <img class="torta" src="https://gifdb.com/images/high/cute-birthday-cake-spinning-m96b797wscqf0byu.gif" alt="torta fiestera">
 
-            <img src="https://media.tenor.com/Ix4mH6WbK0kAAAAj/bubu-dudu.gif">
+        <button class="boton" id="boton">
+            ¡A celebrar, Lizz! 🎊
+        </button>
 
-            <img src="https://media.tenor.com/2Yf8Xv7Xf_8AAAAj/happy-dog.gif">
+        <div class="sorpresa" id="sorpresa">
+
+            <div class="texto">
+                <p style="text-align: center; font-size: 1.2rem; color: #ff5d8f; margin-bottom: 15px;"><b>¡Feliz cumpleaños, Lizz! 💖</b></p>
+                
+                Ya oficialmente estás entrando a la etapa donde te emocionas por dormir temprano 😭✨
+                <br><br>
+                Espero que tus 19 vengan con muchísima felicidad, momentos épicos, cero estrés y que nunca se te queme la torta 🎂
+                <br><br>
+                Sigue siendo igual de divertida, caótica y random JAJA 💖
+                <br><br>
+                Y recuerda: los 19 son peligrosos... porque ya no eres adolescente chiquita pero tampoco adulta funcional 💀
+            </div>
+
+            <div class="gifs">
+                <img src="https://media.tenor.com/7SWeH6M7m0IAAAAj/capybara-dance.gif" alt="Capibara">
+                <img src="https://media.tenor.com/YvSgT0w_Z7gAAAAj/bubu-dudu.gif" alt="Osito">
+                <img src="https://media.tenor.com/2Yf8Xv7Xf_8AAAAj/happy-dog.gif" alt="Perrito">
+            </div>
 
         </div>
 
     </div>
 
-</div>
+    <script>
+        // LÓGICA DE CONTROL DEL BOTÓN INTERACTIVO
+        const boton = document.getElementById("boton");
+        const sorpresa = document.getElementById("sorpresa");
 
-<script>
+        boton.addEventListener("click", () => {
+            if (sorpresa.style.display === "block") {
+                sorpresa.style.display = "none";
+                boton.innerHTML = "¡A celebrar, Lizz! 🎊";
+            } else {
+                sorpresa.style.display = "block";
+                boton.innerHTML = "Felicidades por sobrevivir 19 años 💀✨";
+            }
+        });
 
-// BOTON
+        // EFECTO DE LLUVIA DE CONFETI INFINITA HSL
+        const confeti = document.getElementById("confeti");
 
-const boton =
-document.getElementById("boton");
-
-const sorpresa =
-document.getElementById("sorpresa");
-
-boton.addEventListener("click", ()=>{
-
-    if(sorpresa.style.display === "block"){
-
-        sorpresa.style.display = "none";
-
-        boton.innerHTML =
-        "¡A celebrar, Lizz! 🎊";
-
-    }else{
-
-        sorpresa.style.display = "block";
-
-        boton.innerHTML =
-        "Felicidades por sobrevivir 19 años 💀✨";
-
-    }
-
-});
-
-// CONFETI
-
-const confeti =
-document.getElementById("confeti");
-
-for(let i=0;i<120;i++){
-
-    const papel =
-    document.createElement("span");
-
-    papel.style.left =
-    Math.random()*100 + "vw";
-
-    papel.style.animationDuration =
-    (Math.random()*3 + 3) + "s";
-
-    papel.style.background =
-    `hsl(${Math.random()*360},
-    100%,60%)`;
-
-    papel.style.opacity =
-    Math.random();
-
-    confeti.appendChild(papel);
-
-}
-
-</script>
+        for (let i = 0; i < 100; i++) {
+            const papel = document.createElement("span");
+            papel.style.left = Math.random() * 100 + "vw";
+            papel.style.animationDuration = (Math.random() * 3 + 3) + "s";
+            papel.style.animationDelay = (Math.random() * 5) + "s";
+            papel.style.background = `hsl(${Math.random() * 360}, 100%, 60%)`;
+            papel.style.opacity = Math.random();
+            confeti.appendChild(papel);
+        }
+    </script>
 
 </body>
 </html>
